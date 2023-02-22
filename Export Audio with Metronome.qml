@@ -56,7 +56,7 @@ MuseScore {
 		text: qsTr("This plugin does not support MuseScore 4.0")
 		detailedText: qsTr("To export a score with metronome, enable it in the mixer.")
 		onAccepted: {quit()}
-	}
+	}//MessageDialog
 	
 	Dialog {
 		id: settingsDialog
@@ -128,7 +128,7 @@ MuseScore {
 			}//combobox
 			
 		}//gridlayout
-	}//settingsdialog
+	}//settingsDialog
 	
 	function createMetronome() {
 		curScore.startCmd(); //surround action with startCmd/endCmd to make it undoable
@@ -183,7 +183,7 @@ MuseScore {
 		
 		//open file prompt window
 		exportDialog.open();
-	}
+	}//createMetronome()
 	
 	FileDialog {
         id: exportDialog
@@ -207,7 +207,7 @@ MuseScore {
 			finish();
         }//onRejected
 		
-    } //filedialog
+    } //FileDialog
 	
 	function finish() {
 	
@@ -235,7 +235,7 @@ MuseScore {
 		curScore.endCmd();
 		cmd("undo");
 		cmd("save");
-	}//finish
+	}//finish()
 	
 	onRun: {
 		if (mscoreMajorVersion < 4) {
