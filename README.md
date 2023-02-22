@@ -1,4 +1,4 @@
-# Export Audio with Metronome (v1.0)
+# [Export Audio with Metronome (v1.0)](https://musescore.org/en/project/export-audio-metronome)
 A plugin for MuseScore 3 that includes the metronome when exporting audio files.
 
 ![Usage example](example.png "Usage example")
